@@ -1,0 +1,196 @@
+{ "columns":31,
+ "image":"images\/racing-pack\/Spritesheets\/spritesheet_tiles.png",
+ "imageheight":2048,
+ "imagewidth":4096,
+ "margin":0,
+ "name":"spritesheet_tiles",
+ "spacing":2,
+ "terrains":[
+        {
+         "name":"Grass",
+         "tile":69
+        }, 
+        {
+         "name":"dirt",
+         "tile":14
+        }, 
+        {
+         "name":"Sand",
+         "tile":68
+        }],
+ "tilecount":465,
+ "tiledversion":"1.2.4",
+ "tileheight":128,
+ "tiles":[
+        {
+         "id":6,
+         "terrain":[1, 1, 2, 2]
+        }, 
+        {
+         "id":7,
+         "terrain":[1, 1, 0, 0]
+        }, 
+        {
+         "id":14,
+         "terrain":[1, 1, 1, 1]
+        }, 
+        {
+         "id":37,
+         "terrain":[1, 1, 1, 2]
+        }, 
+        {
+         "id":38,
+         "terrain":[1, 1, 1, 0]
+        }, 
+        {
+         "id":45,
+         "terrain":[1, 2, 2, 2]
+        }, 
+        {
+         "id":68,
+         "terrain":[2, 2, 2, 2]
+        }, 
+        {
+         "id":69,
+         "terrain":[0, 0, 0, 0]
+        }, 
+        {
+         "id":76,
+         "terrain":[1, 1, 2, 2]
+        }, 
+        {
+         "id":99,
+         "terrain":[2, 1, 1, 1]
+        }, 
+        {
+         "id":100,
+         "terrain":[0, 1, 1, 1]
+        }, 
+        {
+         "id":107,
+         "terrain":[2, 1, 2, 2]
+        }, 
+        {
+         "id":130,
+         "terrain":[2, 2, 1, 1]
+        }, 
+        {
+         "id":131,
+         "terrain":[0, 0, 1, 1]
+        }, 
+        {
+         "id":138,
+         "terrain":[2, 1, 1, 1]
+        }, 
+        {
+         "id":161,
+         "terrain":[1, 2, 1, 1]
+        }, 
+        {
+         "id":162,
+         "terrain":[1, 0, 1, 1]
+        }, 
+        {
+         "id":169,
+         "terrain":[1, 2, 1, 1]
+        }, 
+        {
+         "id":192,
+         "terrain":[1, 2, 2, 2]
+        }, 
+        {
+         "id":193,
+         "terrain":[1, 0, 0, 0]
+        }, 
+        {
+         "id":200,
+         "terrain":[1, 2, 1, 2]
+        }, 
+        {
+         "id":223,
+         "terrain":[2, 1, 2, 2]
+        }, 
+        {
+         "id":224,
+         "terrain":[0, 1, 0, 0]
+        }, 
+        {
+         "id":231,
+         "terrain":[1, 1, 1, 1]
+        }, 
+        {
+         "id":254,
+         "terrain":[2, 1, 2, 1]
+        }, 
+        {
+         "id":255,
+         "terrain":[0, 1, 0, 1]
+        }, 
+        {
+         "id":262,
+         "terrain":[2, 1, 2, 1]
+        }, 
+        {
+         "id":285,
+         "terrain":[2, 2, 2, 2]
+        }, 
+        {
+         "id":286,
+         "terrain":[0, 0, 0, 0]
+        }, 
+        {
+         "id":293,
+         "terrain":[1, 1, 2, 1]
+        }, 
+        {
+         "id":316,
+         "terrain":[1, 2, 1, 2]
+        }, 
+        {
+         "id":317,
+         "terrain":[1, 0, 1, 0]
+        }, 
+        {
+         "id":324,
+         "terrain":[1, 1, 1, 2]
+        }, 
+        {
+         "id":347,
+         "terrain":[2, 2, 1, 2]
+        }, 
+        {
+         "id":348,
+         "terrain":[0, 0, 1, 0]
+        }, 
+        {
+         "id":355,
+         "terrain":[2, 2, 1, 2]
+        }, 
+        {
+         "id":378,
+         "terrain":[2, 2, 2, 1]
+        }, 
+        {
+         "id":379,
+         "terrain":[0, 0, 0, 1]
+        }, 
+        {
+         "id":409,
+         "terrain":[1, 1, 2, 1]
+        }, 
+        {
+         "id":416,
+         "terrain":[2, 2, -1, -1]
+        }, 
+        {
+         "id":440,
+         "terrain":[1, 1, 0, 1]
+        }, 
+        {
+         "id":447,
+         "terrain":[2, 2, 2, -1]
+        }],
+ "tilewidth":128,
+ "type":"tileset",
+ "version":1.2
+}
