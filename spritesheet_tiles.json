@@ -23,6 +23,29 @@
  "tileheight":128,
  "tiles":[
         {
+         "id":0,
+         "properties":[
+                {
+                 "name":"wall_top",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
+         "id":1,
+         "properties":[
+                {
+                 "name":"wall_right",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"well_left",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
          "id":6,
          "terrain":[1, 1, 2, 2]
         }, 
@@ -33,6 +56,20 @@
         {
          "id":14,
          "terrain":[1, 1, 1, 1]
+        }, 
+        {
+         "id":31,
+         "properties":[
+                {
+                 "name":"wall_left",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"wall_top",
+                 "type":"bool",
+                 "value":true
+                }]
         }, 
         {
          "id":37,
@@ -47,6 +84,20 @@
          "terrain":[1, 2, 2, 2]
         }, 
         {
+         "id":62,
+         "properties":[
+                {
+                 "name":"wall_bottom",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"wall_top",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
          "id":68,
          "terrain":[2, 2, 2, 2]
         }, 
@@ -57,6 +108,20 @@
         {
          "id":76,
          "terrain":[1, 1, 2, 2]
+        }, 
+        {
+         "id":93,
+         "properties":[
+                {
+                 "name":"wall_left",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"wall_right",
+                 "type":"bool",
+                 "value":true
+                }]
         }, 
         {
          "id":99,
@@ -83,6 +148,15 @@
          "terrain":[2, 1, 1, 1]
         }, 
         {
+         "id":155,
+         "properties":[
+                {
+                 "name":"wall_bottom",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
          "id":161,
          "terrain":[1, 2, 1, 1]
         }, 
@@ -105,6 +179,109 @@
         {
          "id":200,
          "terrain":[1, 2, 1, 2]
+        }, 
+        {
+         "id":217,
+         "properties":[
+                {
+                 "name":"wall_top",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
+         "id":219,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "name":"",
+             "objects":[
+                    {
+                     "height":23,
+                     "id":1,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":25,
+                     "x":-5,
+                     "y":-2
+                    }, 
+                    {
+                     "height":19,
+                     "id":3,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":20,
+                     "x":110,
+                     "y":0
+                    }, 
+                    {
+                     "height":20,
+                     "id":4,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":19,
+                     "x":109,
+                     "y":111
+                    }, 
+                    {
+                     "height":19,
+                     "id":5,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":24,
+                     "x":-4,
+                     "y":107
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            }
+        }, 
+        {
+         "id":220,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "name":"",
+             "objects":[
+                    {
+                     "height":129,
+                     "id":2,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":20,
+                     "x":109,
+                     "y":0
+                    }, 
+                    {
+                     "height":127,
+                     "id":3,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":-1,
+                     "y":1
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            }
         }, 
         {
          "id":223,
@@ -167,6 +344,20 @@
          "terrain":[2, 2, 1, 2]
         }, 
         {
+         "id":372,
+         "properties":[
+                {
+                 "name":"wall_bottom",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"wall_top",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
          "id":378,
          "terrain":[2, 2, 2, 1]
         }, 
@@ -175,12 +366,40 @@
          "terrain":[0, 0, 0, 1]
         }, 
         {
+         "id":403,
+         "properties":[
+                {
+                 "name":"wall_left",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"wall_right",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
          "id":409,
          "terrain":[1, 1, 2, 1]
         }, 
         {
          "id":416,
-         "terrain":[2, 2, -1, -1]
+         "terrain":[2, 2, 1, 1]
+        }, 
+        {
+         "id":434,
+         "properties":[
+                {
+                 "name":"wall_bottom",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"wall_top",
+                 "type":"bool",
+                 "value":true
+                }]
         }, 
         {
          "id":440,
@@ -188,7 +407,7 @@
         }, 
         {
          "id":447,
-         "terrain":[2, 2, 2, -1]
+         "terrain":[2, 2, 2, 1]
         }],
  "tilewidth":128,
  "type":"tileset",
