@@ -44,7 +44,7 @@ class GameMap:
         self.check_point_rects = []
         for check_point in self.check_points:
             self.check_point_rects.append(
-                Rect(check_point['y'], check_point['y'], check_point['width'], check_point['height']))
+                Rect(check_point['x'], check_point['y'], check_point['width'], check_point['height']))
 
         self.starting_grid = self.object_dict['starting_grid']['objects']
 
@@ -107,12 +107,13 @@ def draw():
 
 def do_check_points():
     collision_index = player.map_rect.collidelist(game_map.check_point_rects)
-    if collision_index > player.next_checkpoint:
-        player.next_checkpoint = collision_index
+    print(repr(player.map_rect.center), collision_index, player.next_checkpoint)
+    if collision_index == player.next_checkpoint:
+        player.next_checkpoint += 1
         player.wrong_way = False
         if game_map.check_points[collision_index]['name'] == 'finish':
             player.won = True
-    else:
+    elif collision_index != -1 and collision_index < player.next_checkpoint - 2:
         player.wrong_way = True
 
 
