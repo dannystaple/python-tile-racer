@@ -83,6 +83,7 @@ def start_game():
     player.speed = Vector2(0, 0)
     player.lap = 1
     player.won = False
+    player.last_check_point = len(game_map.check_points) - 2
     player.wrong_way = False
     player.next_checkpoint = 0
 
@@ -107,14 +108,21 @@ def draw():
 
 def do_check_points():
     collision_index = player.map_rect.collidelist(game_map.check_point_rects)
-    print(repr(player.map_rect.center), collision_index, player.next_checkpoint)
-    if collision_index == player.next_checkpoint:
-        player.next_checkpoint += 1
-        player.wrong_way = False
-        if game_map.check_points[collision_index]['name'] == 'finish':
-            player.won = True
-    elif collision_index != -1 and collision_index < player.next_checkpoint - 2:
-        player.wrong_way = True
+    # Only collide if it's different, and is a collision.
+    if collision_index != -1 and collision_index != player.last_check_point:
+        expected_right_way_checkpoint = (player.last_check_point + 1) % len(game_map.check_points)
+        print(collision_index, player.next_checkpoint, player.last_check_point,
+            expected_right_way_checkpoint)
+        if collision_index == player.next_checkpoint:
+            player.next_checkpoint += 1
+            if game_map.check_points[collision_index]['name'] == 'finish':
+                player.won = True
+            player.wrong_way = False
+        elif collision_index == expected_right_way_checkpoint:
+            player.wrong_way = False
+        else:
+            player.wrong_way = True
+        player.last_check_point = collision_index
 
 
 def update():
