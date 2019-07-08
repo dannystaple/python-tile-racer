@@ -21,13 +21,12 @@ The aim is to drive through the checkpoints to the finish line.
 * Car has inertias.
 * Checkpoints and single lap win condition.
 * Wrong way detection.
+* Map boundary collisions.
 
 ### Roadmap
 
-* Object layers - barrels, trees. Complicated by the fact that the tileset doesn't have these in
-the same tile size as the map layer.
+* Object layers - barrels, trees. Complicated by the fact that the tileset doesn't have these in the same tile size as the map layer.
 * Object collisions.
-* Screen boundary collisions.
 * Top banner for score/checkpoints player data.
 * Laps
 * Start and end screens.
@@ -80,3 +79,5 @@ I encourage pull requests with features and discussion.
 
 Tileset and car images come from the Racing pack at [kenney.nl](https://kenney.nl/assets/racing-pack). These are covered
 by the CC 1.0 Universal license.
+
+Learned lots from tutorials at [Game From Scratch](https://www.gamefromscratch.com/post/2015/10/14/Tiled-Map-Editor-Tutorial-Series.aspx)
