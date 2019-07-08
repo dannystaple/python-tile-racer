@@ -111,8 +111,7 @@ def do_check_points():
     # Only collide if it's different, and is a collision.
     if collision_index != -1 and collision_index != player.last_check_point:
         expected_right_way_checkpoint = (player.last_check_point + 1) % len(game_map.check_points)
-        print(collision_index, player.next_checkpoint, player.last_check_point,
-            expected_right_way_checkpoint)
+
         if collision_index == player.next_checkpoint:
             player.next_checkpoint += 1
             if game_map.check_points[collision_index]['name'] == 'finish':
@@ -127,24 +126,33 @@ def do_check_points():
 
 def update():
     steering = 0
+    pls = player.speed.length_squared()
     if keyboard.left:
         steering = +5
     if keyboard.right:
         steering = -5
-    if steering and player.speed.length_squared() > 0:
+    if steering and pls > 0:
         player.angle += steering
         player.speed.rotate_ip(steering)
         player.map_rect.width = player.width
         player.map_rect.height = player.height
     if keyboard.up:
-        if player.speed.length_squared() < player.max_speed_squared:
+        if pls < player.max_speed_squared:
             speed = Vector2()
-            speed.from_polar((1, player.angle-90))
+            speed.from_polar((2, player.angle-90))
             player.speed += speed
+    elif keyboard.down:
+        if pls > 2:
+            brake = Vector2()
+            brake.from_polar((2, player.angle-90))
+            player.speed -= brake
+        else:
+            player.speed = Vector2(0, 0)
     else:
         player.speed *= 0.9
-    player.map_rect.x -= player.speed.x
-    player.map_rect.y += player.speed.y
+    if pls > 0.5:
+        player.map_rect.x -= player.speed.x
+        player.map_rect.y += player.speed.y
 
     do_check_points()
 
