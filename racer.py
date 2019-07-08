@@ -123,19 +123,23 @@ def do_check_points():
             player.wrong_way = True
         player.last_check_point = collision_index
 
+def rotate_player(angle):
+    player.angle += angle
+    player.speed.rotate_ip(angle)
+    player.map_rect.width = player.width
+    player.map_rect.height = player.height
 
 def update():
     steering = 0
     pls = player.speed.length_squared()
+    if pls < 0.7:
+        player.speed = Vector2(0, 0)
     if keyboard.left:
         steering = +5
     if keyboard.right:
         steering = -5
     if steering and pls > 0:
-        player.angle += steering
-        player.speed.rotate_ip(steering)
-        player.map_rect.width = player.width
-        player.map_rect.height = player.height
+        rotate_player(steering)
     if keyboard.up:
         if pls < player.max_speed_squared:
             speed = Vector2()
@@ -146,11 +150,13 @@ def update():
             brake = Vector2()
             brake.from_polar((2, player.angle-90))
             player.speed -= brake
-        else:
-            player.speed = Vector2(0, 0)
     else:
         player.speed *= 0.9
     if pls > 0.5:
+        new_position = Vector2(player.map_rect.x - player.speed.x, player.map_rect.y + player.speed.y)
+        if new_position.x > game_map.width or new_position.x < 0 or new_position.y < 0 or new_position.y > game_map.height:
+            rotate_player(-90)
+            player.speed *= 0.5
         player.map_rect.x -= player.speed.x
         player.map_rect.y += player.speed.y
 
