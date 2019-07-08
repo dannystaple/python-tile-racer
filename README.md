@@ -70,3 +70,13 @@ If no accelerate or break key is pressed, drag is applied to the car by multiply
 Update then updates the players map_rect based on the speed vector, and then does the check points.
 
 The code finally calls the start_game function to set the variables up.
+
+## Game License
+
+CC 1.0 Universal
+I encourage pull requests with features and discussion.
+
+## Acknowledgements
+
+Tileset and car images come from the Racing pack at [kenney.nl](https://kenney.nl/assets/racing-pack). These are covered
+by the CC 1.0 Universal license.
