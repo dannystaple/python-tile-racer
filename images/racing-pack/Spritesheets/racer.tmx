@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="128" tileheight="128" infinite="0" nextlayerid="9" nextobjectid="30">
+ <tileset firstgid="1" source="spritesheet_tiles.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="10">
+  <data encoding="csv">
+69,286,379,131,131,356,69,286,69,286,
+286,379,139,15,232,170,131,131,348,69,
+286,255,232,39,8,8,441,15,201,286,
+69,255,39,194,70,287,256,232,317,286,
+69,255,318,70,70,380,101,232,201,286,
+69,255,163,349,70,225,441,232,201,286,
+69,263,232,318,70,70,256,232,317,286,
+69,255,232,163,132,132,101,15,201,286,
+69,224,7,7,7,7,7,7,46,286,
+286,69,69,286,69,286,286,286,286,69
+</data>
+ </layer>
+ <layer id="4" name="Copy of Tile Layer 1" width="10" height="10">
+  <data encoding="csv">
+409,1,1,1,1,1,1,1,1,378,
+408,222,283,283,283,283,283,283,191,346,
+408,346,0,0,0,0,0,0,408,346,
+408,346,0,0,0,0,0,0,408,346,
+312,250,0,0,0,0,0,0,408,346,
+408,346,0,0,0,0,0,0,408,346,
+408,346,0,0,0,0,0,0,408,346,
+408,346,32,435,435,435,440,0,408,346,
+408,128,158,1,1,1,158,1,97,346,
+315,283,283,283,283,283,283,283,283,284
+</data>
+ </layer>
+ <objectgroup id="2" name="racing_zone" visible="0" locked="1">
+  <object id="6" x="4" y="550">
+   <polygon points="14,2 12.6837,-453.99 50,-508 115.993,-532.166 1154,-533.944 1228,-508 1255.83,-422 1256.18,604 1236,676 1151.99,706.078 119.936,706.631 36,684 15.7143,608.001 16,42 232,46 234,488 1040,490 1036,-314 230,-314 230,2"/>
+  </object>
+  <object id="8" x="14" y="552" width="218" height="46">
+   <properties>
+    <property name="start_line" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="starting_grid" visible="0" locked="1">
+  <object id="29" x="82" y="630" width="28" height="28"/>
+ </objectgroup>
+ <objectgroup id="7" name="check_points">
+  <object id="14" name="cp_1" x="22" y="360" width="212" height="50"/>
+  <object id="15" name="cp_2" x="30" y="96" width="210" height="140"/>
+  <object id="16" name="cp_3" x="344" y="12" width="82" height="236"/>
+  <object id="17" name="cp_4" x="866" y="8" width="86" height="270"/>
+  <object id="18" name="cp_5" x="1010" y="268" width="268" height="64"/>
+  <object id="19" name="cp_6" x="994" y="582" width="288" height="82"/>
+  <object id="20" name="cp_7" x="996" y="926" width="292" height="76"/>
+  <object id="21" name="cp_8" x="892" y="1014" width="72" height="268"/>
+  <object id="22" name="cp_9" x="670" y="1020" width="80" height="258"/>
+  <object id="23" name="cp_10" x="470" y="1010" width="86" height="280"/>
+  <object id="24" name="cp_11" x="74" y="1008" width="190" height="270"/>
+  <object id="25" name="cp_12" x="-26" y="852" width="290" height="58"/>
+  <object id="26" name="cp_13" x="-28" y="666" width="328" height="78"/>
+  <object id="27" name="finish" x="-22" y="544" width="300" height="72"/>
+ </objectgroup>
+</map>
