@@ -18,7 +18,7 @@ The aim is to drive through the checkpoints to the finish line.
 
 * Supports [tiled](https://www.mapeditor.org) racing maps.
 * Sliding screen window in tile map.
-* Car has inertias.
+* Car has inertia.
 * Checkpoints and single lap win condition.
 * Wrong way detection.
 * Map boundary collisions.
