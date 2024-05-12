@@ -131,6 +131,7 @@ def rotate_player(angle):
 
 def update():
     steering = 0
+    acceleration = 0.9
     pls = player.speed.length_squared()
     if pls < 0.7:
         player.speed = Vector2(0, 0)
@@ -143,12 +144,12 @@ def update():
     if keyboard.up:
         if pls < player.max_speed_squared:
             speed = Vector2()
-            speed.from_polar((2, player.angle-90))
+            speed.from_polar((acceleration, player.angle-90))
             player.speed += speed
     elif keyboard.down:
         if pls > 2:
             brake = Vector2()
-            brake.from_polar((2, player.angle-90))
+            brake.from_polar((acceleration, player.angle-90))
             player.speed -= brake
     else:
         player.speed *= 0.9
