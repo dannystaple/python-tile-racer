@@ -5,7 +5,7 @@ A PyGameZero based 2D top down racing game. Using Tiled exported files for the t
 ## Playing
 
     pgzrun racer.py
-    
+
 Controls are:
 
 * up -> accelerate
